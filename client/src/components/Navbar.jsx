@@ -8,7 +8,7 @@ import axios from 'axios';
 const Navbar = () => {
     const { user } = useContext(UserContext);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    
+
     // Notify user on login (Simple MVP Alert)
     // In a real app, use a Toast library like 'sonner'
     useEffect(() => {
@@ -22,9 +22,9 @@ const Navbar = () => {
     const handleRecCreated = () => {
         window.location.reload(); // Simple brute force refresh for MVP
     };
-    
+
     const handleLogout = async () => {
-         window.location.href = 'http://localhost:5000/api/logout';
+        window.location.href = '/api/logout';
     };
 
     return (
@@ -36,10 +36,10 @@ const Navbar = () => {
                     </Link>
                     <div className="flex gap-6 text-sm font-medium text-gray-500 items-center">
                         <Link to="/" className="hover:text-gray-900 transition-colors">Feed</Link>
-                        
+
                         {user ? (
                             <>
-                                <button 
+                                <button
                                     onClick={() => setIsModalOpen(true)}
                                     className="hover:text-black transition-colors"
                                     aria-label="Create Rec"
@@ -47,26 +47,26 @@ const Navbar = () => {
                                     <PlusSquare size={20} />
                                 </button>
                                 <div className="flex items-center gap-3 ml-2">
-                                     <img 
-                                        src={user.avatar || `https://img.freepik.com/premium-vector/person-with-blue-shirt-that-says-name-person_1029948-7040.jpg?semt=ais_hybrid&w=740&q=80`} 
-                                        className="w-8 h-8 rounded-full border border-gray-200 object-cover" 
+                                    <img
+                                        src={user.avatar || `https://img.freepik.com/premium-vector/person-with-blue-shirt-that-says-name-person_1029948-7040.jpg?semt=ais_hybrid&w=740&q=80`}
+                                        className="w-8 h-8 rounded-full border border-gray-200 object-cover"
                                         alt="profile"
-                                     />
-                                     <button onClick={handleLogout} className="hover:text-black transition-colors">
+                                    />
+                                    <button onClick={handleLogout} className="hover:text-black transition-colors">
                                         <LogOut size={20} />
-                                     </button>
+                                    </button>
                                 </div>
                             </>
                         ) : (
-                            <a href="http://localhost:5000/auth/google" className="hover:text-gray-900 transition-colors">Login</a>
+                            <a href="/auth/google" className="hover:text-gray-900 transition-colors">Login</a>
                         )}
                     </div>
                 </div>
             </nav>
-            <CreateRecModal 
-                isOpen={isModalOpen} 
-                onClose={() => setIsModalOpen(false)} 
-                onRecCreated={handleRecCreated} 
+            <CreateRecModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                onRecCreated={handleRecCreated}
             />
         </>
     );

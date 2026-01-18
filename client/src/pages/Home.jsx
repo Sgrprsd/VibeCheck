@@ -7,9 +7,9 @@ const Home = () => {
 
     useEffect(() => {
         const fetchRecs = async () => {
-             // Mocking data for now as backend might fail without valid auth/db initially in this flow
+            // Mocking data for now as backend might fail without valid auth/db initially in this flow
             try {
-                const res = await axios.get('http://localhost:5000/api/recs');
+                const res = await axios.get('/api/recs');
                 setRecs(res.data);
             } catch (error) {
                 console.error("Error fetching recs", error);
@@ -25,7 +25,7 @@ const Home = () => {
                 <h1 className="text-4xl font-serif italic mb-2">Editor's Picks</h1>
                 <p className="text-gray-400 text-sm tracking-widest uppercase">Latest Curations</p>
             </div>
-            
+
             <div className="space-y-12">
                 {recs.length === 0 ? (
                     <p className="text-center text-gray-400">No recs yet. Be the first.</p>

@@ -28,7 +28,7 @@ const EditRecModal = ({ isOpen, onClose, onRecUpdated, rec }) => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.put(`http://localhost:5000/api/recs/${rec._id}`, formData, {
+      await axios.put(`/api/recs/${rec._id}`, formData, {
         withCredentials: true
       });
       onRecUpdated();

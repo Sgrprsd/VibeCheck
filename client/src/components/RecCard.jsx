@@ -17,7 +17,7 @@ const RecCard = ({ rec }) => {
 
     const handleSteal = async () => {
         try {
-            await axios.post(`http://localhost:5000/api/recs/rerec/${rec._id}`, {}, {
+            await axios.post(`/api/recs/rerec/${rec._id}`, {}, {
                 withCredentials: true
             });
             alert("Stolen! Added to your profile.");
@@ -31,7 +31,7 @@ const RecCard = ({ rec }) => {
     const handleDelete = async () => {
         if (!window.confirm("Are you sure you want to delete this Rec?")) return;
         try {
-            await axios.delete(`http://localhost:5000/api/recs/${rec._id}`, { withCredentials: true });
+            await axios.delete(`/api/recs/${rec._id}`, { withCredentials: true });
             window.location.reload(); // Simple refresh for now
         } catch (err) {
             console.error("Delete failed", err);
