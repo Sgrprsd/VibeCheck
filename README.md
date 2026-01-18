@@ -4,7 +4,7 @@
 
 ## Core Philosophy
 
-- **No Algorithms**: A pure, chronological feed. If you follow someone, you see their VibeCheck.
+- **No Algorithms**: A pure, chronological feed. If you follow someone, you see their Vibe.
 - **Visual First**: A "zine-like" aesthetic with serif typography, generous whitespace, and rich media embeds.
 - **Curate & Collect**: A "Steal" (Re-Rec) mechanic that allows users to quickly curate a library of things they love from others.
 
@@ -82,5 +82,3 @@ CLOUDINARY_API_SECRET=your_api_secret
     cd client
     npm run dev
     ```
-
-Open [http://localhost:5173](http://localhost:5173) to view the app.
