@@ -1,10 +1,10 @@
-# Taste. — The Anti-Algorithm Curation Engine
+# VibeCheck. — The Anti-Algorithm Curation Engine
 
-**Taste.** is a minimalist, community-driven platform designed to bring back the art of human curation. In an era of noisy algorithmic feeds, Taste. offers a quiet, high-signal space where users share "Recs" (recommendations) based on genuine quality, not engagement bait.
+**VibeCheck.** is a minimalist, community-driven platform designed to bring back the art of human curation. In an era of noisy algorithmic feeds, VibeCheck. offers a quiet, high-signal space where users share "Recs" (recommendations) based on genuine quality, not engagement bait.
 
 ## Core Philosophy
 
-- **No Algorithms**: A pure, chronological feed. If you follow someone, you see their taste.
+- **No Algorithms**: A pure, chronological feed. If you follow someone, you see their Vibe.
 - **Visual First**: A "zine-like" aesthetic with serif typography, generous whitespace, and rich media embeds.
 - **Curate & Collect**: A "Steal" (Re-Rec) mechanic that allows users to quickly curate a library of things they love from others.
 
@@ -82,5 +82,3 @@ CLOUDINARY_API_SECRET=your_api_secret
     cd client
     npm run dev
     ```
-
-Open [http://localhost:5173](http://localhost:5173) to view the app.
